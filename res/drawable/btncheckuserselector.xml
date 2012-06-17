@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/btncheckuserpressed"
+          android:state_pressed="true" />
+    <item android:drawable="@drawable/btncheckuserfocus"
+          android:state_focused="true" />
+    <item android:drawable="@drawable/btncheckuser" />
+</selector>

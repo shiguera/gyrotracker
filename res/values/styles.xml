@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Comunes -->
+    <style name="main_lbl_titactivity">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- main.xml -->
+    <style name="main_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">#ffdc00</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:paddingLeft">6dip</item>
+	</style>
+    <style name="main_data">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">48dip</item>
+    </style>
+    
+    <!-- Etiqetas Lon, Lat, ... -->
+    <style name="main_label_peque">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffdc00</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:paddingLeft">6dip</item>
+    </style>
+    <!-- Etiqueta parpadeante -->
+    <style name="etiqueta_tracking">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+	<!-- Dato Lon, Lat, etc -->
+    <style name="main_dato_peque">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>        
+        <item name="android:paddingLeft">12dip</item>
+    </style>
+    <!-- Consola -->
+    <style name="consola" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:background">#fafafa</item>   
+        <item name="android:textColor">#000000</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14dp</item>      
+    </style>
+    <!-- Botones -->
+    <style name="buttonOn">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/grad_green</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="buttonRecord">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/grad_orange</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="buttonEmisor">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/grad_blue</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="buttonGray">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/grad_gray</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!-- config.xml -->
+    <style name="etiqueta_config" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffdc00</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="campo_config">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:singleLine">true</item>        
+    </style>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" >
+    
+    <!-- Panel superior: botón 'done' mas título -->
+    <LinearLayout
+        android:id="@+id/main_panelsup" android:layout_alignParentTop="true"
+        android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/grad_lightblue" android:orientation="horizontal"
+        android:paddingBottom="6dip" android:paddingLeft="3dip" android:paddingRight="3dip" android:paddingTop="6dip" >
+        <TextView style="@style/main_lbl_titactivity" android:text="@string/main_lbl_titactivity" 
+            android:gravity="center"/>
+    </LinearLayout>
+    <!-- End Panel superior: botón 'done' mas título -->
+    
+    
+    <!-- Panel central -->
+    <ScrollView android:id="@+id/main_panelscroll" android:layout_height="wrap_content"
+        android:layout_width="fill_parent" android:layout_below="@id/main_panelsup">
+	    <!-- Hijo unico del scroll -->
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		    android:orientation="vertical">
+	 
+		    <!-- Speed and course and botones track, record, transmit -->
+	        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+	            android:orientation="horizontal" android:weightSum="1.0" android:padding="3dip"
+	            android:baselineAligned="false">		
+	            <!-- Speed and course -->
+	            <LinearLayout android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" 
+	                android:orientation="vertical" android:layout_weight="0.35">
+	                <!-- Speed -->
+	                <LinearLayout android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+	                    android:background="@drawable/marco_boton" android:orientation="vertical">
+	                    <TextView style="@style/main_label" android:text="@string/label_velocity" />
+	                    <TextView android:id="@+id/editVelocity" style="@style/main_data" android:text="" />
+	                </LinearLayout>
+	                <!-- end Speed -->
+	                <!-- Course -->
+	                <LinearLayout android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+	                    android:background="@drawable/marco_boton" android:orientation="vertical">
+	                    <TextView style="@style/main_label" android:text="@string/label_bearing" />
+	                    <TextView android:id="@+id/editBearing" style="@style/main_data" android:text="" />
+	                </LinearLayout>
+	                <!-- end course -->                
+	            </LinearLayout>
+	            <!-- end speed and course -->
+		
+				<!-- botones track, record, transmit -->
+	            <LinearLayout android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" android:layout_marginLeft="12dip"
+	                android:orientation="vertical" android:layout_weight="0.65">
+	                <!-- boton track -->
+	                <TextView style="@style/main_label" android:layout_marginTop="12dp"
+	                    android:text="@string/label_btntrack" />
+	                <ImageButton android:id="@+id/btnTrack"
+	                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+	                    android:background="@null" android:contentDescription="@string/label_btntrackdesc"
+	                    android:onClick="onClick" android:src="@drawable/buttonoff" />
+	                <!-- boton record -->
+	                <TextView style="@style/main_label"  android:layout_marginTop="24dp"
+	                    android:text="@string/label_btnrecord" />
+	                <ImageButton android:id="@+id/btnRecord"
+	                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+	                    android:background="@null" android:contentDescription="@string/label_btnrecorddesc"
+	                    android:onClick="onClick" android:src="@drawable/buttonoff" />                
+	                <!-- boton transmit -->
+	                <TextView style="@style/main_label" android:layout_marginTop="24dp"
+	                    android:text="@string/label_btntransmit" />
+	                <ImageButton android:id="@+id/btnTransmit"
+	                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+	                    android:background="@null" android:contentDescription="@string/label_btntransmitdesc"
+	                    android:onClick="onClick" android:src="@drawable/buttonoff" />
+	            </LinearLayout>
+	     		<!-- end botones track, record, transmit -->	
+		    </LinearLayout>
+		 	<!-- end Speed and course and botones track, record, transmit -->	    
+
+		    <!-- Panel centraĺ : Etiquetas longitude, latitude, altitude y brújula-->
+	        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+	            android:orientation="horizontal" android:padding="3dip" android:baselineAligned="false"
+	            android:weightSum="1.0">	               
+				<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+	                android:background="@drawable/marco_boton" android:orientation="vertical"
+	                android:layout_weight="0.5">
+		            <TextView style="@style/main_label" android:text="@string/main_label_lon" />
+		            <TextView android:id="@+id/editLon" style="@style/main_dato_peque" android:text="" />
+		            <TextView style="@style/main_label" android:text="@string/main_label_lat" />
+			        <TextView android:id="@+id/editLat" style="@style/main_dato_peque" android:text="" />
+			        <TextView style="@style/main_label" android:text="@string/main_label_alt" />
+			        <TextView android:id="@+id/editAlt" style="@style/main_dato_peque" android:text="" />
+			        <TextView style="@style/main_label" android:text="@string/main_label_sats" />
+			        <TextView android:id="@+id/editSats" style="@style/main_dato_peque" android:text="" />
+		    	</LinearLayout>
+		    	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		    	    android:layout_weight="0.5" android:gravity="center" android:padding="24dip">
+			    	<ImageView android:id="@+id/main_img_brujula"
+			    	    android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            	android:src="@drawable/brujula1"  android:scaleType="fitCenter"
+		            	android:contentDescription="@string/main_descrip_brujula"/>
+		    	</LinearLayout>	            
+	    	</LinearLayout>
+    	
+    	</LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" android:orientation="vertical">
+	    <!-- Panel botones MAP, CONF, EXIT -->
+	    <LinearLayout android:id="@+id/main_panelbotones" android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:padding="3dp" >
+	        <!-- Boton MAP -->
+	        <ImageButton
+	            android:id="@+id/btnMap" android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" android:layout_weight="0.25"
+	            android:onClick="onClick" android:background="@null"
+				android:src="@drawable/btnmapselector" android:contentDescription="@string/main_descrip_btnmap"/>
+			<!-- Boton CONF -->
+	        <ImageButton
+	            android:layout_width="wrap_content" android:layout_height="wrap_content"
+	            android:id="@+id/btnConfig" android:layout_weight="0.25"
+	            android:onClick="onClick" android:background="@null"
+	            android:src="@drawable/btnconfigselector" android:contentDescription="@string/main_descrip_btnconfig"/>
+	        <!-- Boton Exit -->
+	        <ImageButton
+	            android:id="@+id/btnExit" android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" android:layout_weight="0.25"
+	            android:onClick="onClick" android:background="@null"
+	            android:src="@drawable/btnexitselector" android:contentDescription="@string/main_descrip_btnexit"/>
+	    </LinearLayout>
+	    
+	    <!-- StatusLabel -->
+	    <LinearLayout 
+	        android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	        android:background="#0000ff" android:paddingLeft="12dip">
+	        <TextView android:id="@+id/labelStatus"
+	            android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		        android:textColor="#ffffff" android:text=""
+	            android:textStyle="normal" android:typeface="monospace"/>
+	    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

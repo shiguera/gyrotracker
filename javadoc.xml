@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="-charset 'utf-8'" author="true" 
+            classpath="/home/shiguera/apps/android-sdk-linux/platforms/android-7/android.jar:/home/shiguera/apps/android-sdk-linux/tools/support/annotations.jar:/home/shiguera/workspace/mapquest/mapquest-android-sdk-1.0.1.jar" 
+            destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" 
+            nonavbar="false" notree="false" 
+            packagenames="mlab.projects.girotracker" 
+            source="1.6" sourcepath="gen:src" 
+            splitindex="true" use="true" version="true">
+            <link href="file:/home/shiguera/apps/android-sdk-linux/docs/reference/"/>
+        </javadoc>
+    </target>
+</project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main activity -->
+    <string name="hello">Hello World, Girotracker2Activity!</string>
+    <string name="app_name">GyroTracker</string>
+    <string name="main_lbl_titactivity">GyroTracker</string>
+    <string name="label_velocity">Speed (Km/h)</string>
+    <string name="label_bearing">Course</string>
+    <string name="label_btntransmit">Transmitting</string>
+    <string name="label_btntransmitdesc">Transmit on/off</string>
+    <string name="label_btntrack">Tracking</string>
+    <string name="label_btntrackdesc">Track on/off</string>
+    <string name="label_btnrecord">Recording</string>
+    <string name="label_btnrecorddesc">Record on/off</string>
+    <string name="main_label_lat">Latitude</string>
+    <string name="main_label_lon">Longitude</string>
+    <string name="main_label_alt">Altitude</string>
+    <string name="main_label_sats">Sats/Acc</string>
+    <string name="label_btnmap">Map</string>
+    <string name="label_btnconfig">Config</string>
+    <string name="label_btnexit">Exit</string>
+    <string name="main_descrip_brujula">Brújula</string>
+    <string name="main_descrip_btnmap">Button map</string>
+    <string name="main_descrip_btnconfig">Button config</string>
+    <string name="main_descrip_btnexit">Button exit</string>
+        
+
+    <!-- Config Activity -->
+    <string name="config_btn_done">Done</string>
+    <string name="config_lbl_titactivity">Gyrotracker - Config</string>
+    <string name="config_lbl_btndone_descrip">Ends config activity</string>
+    <string name="config_lbl_dontputspaces">(Don\'t put spaces)</string>
+    <string name="config_lbl_user">User</string>
+    <string name="config_lbl_password">Password</string>
+    <string name="config_lbl_tracklabel">Track Label</string>
+    <string name="config_lbl_recordinterval">Record interval (sg)</string>
+    <string name="config_lbl_transmitinterval">Transmit interval (sg)</string>
+    <string name="config_lbl_buffersize">Buffer size (points)</string>
+    <string name="config_btn_checkuser">Check user and password</string>
+    <string name="config_lbl_currentconfig">Current config.\nrecording time:</string>
+	<string name="config_lbl_status">Configuration</string>
+	<string name="config_lbl_btncheckuser_descrip">Button check user</string>
+	
+	    
+    
+    
+    <!-- Splash activity -->
+	<string name="splash_descrip_image">Splash image</string>
+    
+</resources>

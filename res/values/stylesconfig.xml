@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <style name="config_lbl_titactivity" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">15dip</item>
+    </style>   
+    <style name="config_lbl_dontputspaces" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#f60</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>   
+    <style name="config_lbl_tv" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fc0</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>   
+    <style name="config_lbl_data" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>   
+    <style name="config_tv" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>   
+    
+</resources>

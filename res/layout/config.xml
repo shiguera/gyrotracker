@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainpanel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <!-- Panel superior: botón 'done' mas título -->
+    <LinearLayout
+        android:id="@+id/config_panelsup" android:layout_alignParentTop="true"
+        android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/grad_lightblue" android:orientation="horizontal"
+        android:paddingBottom="6dip" android:paddingLeft="3dip" android:paddingRight="3dip" android:paddingTop="6dip" >
+        <ImageButton android:id="@+id/config_btn_done"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@null" android:contentDescription="@string/config_lbl_btndone_descrip"
+            android:onClick="onClick" android:src="@drawable/btndoneselector" />
+        <TextView style="@style/config_lbl_titactivity" android:text="@string/config_lbl_titactivity" />
+    </LinearLayout>
+    <!-- End Panel superior: botón 'done' mas título -->
+    
+       <!-- Resto de pantalla en Scroll -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_below="@id/config_panelsup">
+        <!-- hijo único del Scroll -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Etiqueta don't put spaces -->
+            <TextView 
+                style="@style/config_lbl_dontputspaces"
+                android:text="@string/config_lbl_dontputspaces"/>
+            
+            <!-- Tabla con user, password y trackLabel -->
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingLeft="24dip"
+                android:paddingRight="24dip"
+                android:stretchColumns="*" 
+                >
+
+                <!-- User -->
+                <TableRow>
+                    <TextView
+                        style="@style/config_lbl_tv"
+                        android:text="@string/config_lbl_user" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/editUser"
+                        style="@style/config_tv"
+                        android:inputType="text"
+                        android:text="" >
+                    </EditText>
+                </TableRow>
+                
+                <!-- Password -->
+                <TableRow>
+                    <TextView
+                        style="@style/config_lbl_tv"
+                        android:text="@string/config_lbl_password" >
+                    </TextView>
+                    <EditText
+                        android:id="@+id/editPassword"
+                        style="@style/config_tv"
+                        android:inputType="textPassword"
+                        android:text="" >
+                    </EditText>
+                </TableRow>
+                <!-- Label -->
+                <TableRow>
+                    <TextView
+                        style="@style/config_lbl_tv"
+                        android:text="@string/config_lbl_tracklabel" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/editLabel"
+                        style="@style/config_tv"
+                        android:inputType="text"
+                        android:text="" >
+                    </EditText>
+                </TableRow>
+            </TableLayout>
+            <!-- Fin tabla user, password, tracklabel -->
+            
+			<!-- SeekBar de recordInterval -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dip"
+                android:paddingRight="24dip"
+                android:layout_marginTop="10dip"
+                >
+				<LinearLayout
+				    android:layout_width="fill_parent"
+	                android:layout_height="wrap_content">
+				    <TextView
+					    style="@style/config_lbl_tv"
+					    android:text="@string/config_lbl_recordinterval"
+					    />
+					<TextView
+					    android:id="@+id/tv_recordinterval"
+					    style="@style/config_lbl_data"
+					    android:text=""
+					    />
+				</LinearLayout>
+				<SeekBar 
+				    android:id="@+id/sb_recordinterval"
+					android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+                    android:max="100"
+               	    android:focusable="true"
+					android:focusableInTouchMode="true">
+					<requestFocus/>
+			    </SeekBar>
+            </LinearLayout>
+
+			<!-- SeekBar de transmitInterval -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dip"
+                android:paddingRight="24dip"
+                android:layout_marginTop="10dip"
+                >
+				<LinearLayout
+				    android:layout_width="fill_parent"
+	                android:layout_height="wrap_content">
+				    <TextView
+					    style="@style/config_lbl_tv"
+					    android:text="@string/config_lbl_transmitinterval"
+					    />
+				    <TextView
+					    android:id="@+id/tv_transmitinterval"
+					    style="@style/config_lbl_data"
+					    android:text=""
+					    />
+				</LinearLayout>
+				<SeekBar 
+				    android:id="@+id/sb_transmitinterval"
+					android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+                    android:max="100"                    
+				    />
+            </LinearLayout>
+            
+			<!-- SeekBar de BufferSize -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dip"
+                android:paddingRight="24dip"
+                android:layout_marginTop="10dip"
+                >
+				<LinearLayout
+				    android:layout_width="fill_parent"
+	                android:layout_height="wrap_content">
+					<TextView
+					    style="@style/config_lbl_tv"
+					    android:text="@string/config_lbl_buffersize"
+					    />
+					<TextView
+					    android:id="@+id/tv_buffersize"
+					    style="@style/config_lbl_data"
+					    android:text=""
+					    />
+				</LinearLayout>
+				<SeekBar 
+				    android:id="@+id/sb_buffersize"
+					android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+                    android:max="100"
+				    />
+            </LinearLayout>
+            
+			<!-- Etiquetas: Current configuration recording time -->
+            <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="wrap_content"    
+                android:layout_marginTop="6dip" android:paddingLeft="12dip"
+                android:paddingRight="12dip">
+                <!-- User -->
+            	<TextView android:layout_width="fill_parent"
+               	    android:layout_height="fill_parent"
+               	    android:layout_weight="1" android:singleLine="false" android:lines="3"	
+	                android:gravity="center_vertical|center_horizontal"	                
+	                android:text="@string/config_lbl_currentconfig"        
+				    />        
+               	<TextView 
+               	    android:id="@+id/config_tv_recordingtime"
+               	    android:layout_width="fill_parent"
+               	    android:layout_height="fill_parent"
+	                android:layout_weight="1" android:textStyle="bold"
+	                android:textSize="24dip" android:textColor="#ffffff"
+	                android:gravity="center_vertical|center_horizontal"	                
+	                android:text=""
+				    />
+   			</LinearLayout>
+   			<!-- Fin etiqueta recording time -->
+
+	        <!-- Button Check User -->
+		    <LinearLayout 
+		        android:layout_width="fill_parent" android:layout_height="fill_parent" 
+	            android:paddingLeft="24dip" android:paddingRight="24dip"
+	            android:layout_gravity="center">
+               	<ImageButton android:id="@+id/config_btn_checkuser"
+		            android:layout_width="fill_parent" android:layout_height="wrap_content"
+		            android:background="@null" android:contentDescription="@string/config_lbl_btncheckuser_descrip"
+		            android:onClick="onClick" android:src="@drawable/btncheckuserselector">
+		     	</ImageButton>   
+		    </LinearLayout>
+    	</LinearLayout>
+    </ScrollView>
+        
+    <!-- StatusLabel -->
+    <LinearLayout
+        android:layout_alignParentBottom="true" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#0000ff"
+        android:paddingLeft="12dip"
+        >
+        <TextView android:id="@+id/config_lbl_status"
+            android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	        android:textColor="#ffffff" android:text="@string/config_lbl_status"
+            android:textStyle="normal" android:typeface="monospace"
+            />
+    </LinearLayout>
+	    
+</RelativeLayout>
